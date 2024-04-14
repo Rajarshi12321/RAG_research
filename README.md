@@ -75,7 +75,7 @@ To run this project locally, please follow these steps:-
 1. Clone the repository:
 
    ```shell
-   git clone https://github.com/Rajarshi12321/AI_reasearch_assistant.git
+   git clone https://github.com/Rajarshi12321/Langchain_QA.git
    ```
 
 
