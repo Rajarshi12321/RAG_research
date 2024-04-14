@@ -5,15 +5,15 @@ import logging
 # logging string
 logging.basicConfig(level=logging.INFO, format="[%(asctime)s]: %(message)s:")
 
-project_name = "research_assistant_app"
+project_name = "QA_app"
 
 list_of_files = [
     ".github/workflows/.gitkeep",
     f"src/{project_name}/__init__.py",
     f"src/{project_name}/components/__init__.py",
     f"src/{project_name}/utils/__init__.py",
-    "requirements.txt",
-    "setup.py",
+    # "requirements.txt",
+    # "setup.py",
     "research/trials.ipynb",
 ]
 

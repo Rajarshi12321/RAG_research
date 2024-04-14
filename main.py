@@ -1,5 +1,5 @@
-from research_assistant_app.components.data_querying import user_query
+from QA_app.components.data_querying import user_query
 
-ans = user_query("generate a summary based on the information you have")
+ans = user_query("What happened in the deadly mongoose story")
 
 print(ans)

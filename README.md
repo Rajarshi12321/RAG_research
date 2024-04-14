@@ -1,4 +1,4 @@
-# AI_reasearch_assistant Project
+# QA app Project
 
 - [LinkedIn - Rajarshi Roy](https://www.linkedin.com/in/rajarshi-roy-learner/)
   
@@ -13,7 +13,7 @@
 
 ## Table of Contents
 
-- [AI\_reasearch\_assistant Project](#ai_reasearch_assistant-project)
+- [QA app Project](#qa-app-project)
   - [Table of Contents](#table-of-contents)
   - [About The Project](#about-the-project)
     - [For MLOPs tools:](#for-mlops-tools)
@@ -27,18 +27,31 @@
 
 ## About The Project
 
-Welcome to the AI Research Assistant repository. This AI Research Assistant app is powered by Google Gemini. It helps in question answering about the provided research paper by uploading them through Streamlit, we save it in the `Data` folder and clean the document, index it by using Llamma-Index using Gemini Embedding Model. The created index is the upserted into Pinecone Vector DB.
-The query function in the data_querying module will retrieve the vectors from Pinecone Vector DB and use that for generating response by embedding a basic prompt in it.
+Welcome to the QA app repository, a powerful tool built on Google Gemini technology. Our QA app is designed to efficiently implement the RAG (Retrieval-Augmented Generation) model, leveraging cutting-edge technologies including Langchain, Chainlit, and Gemini for lightning-fast query search and response generation.
+
+Key Features:
+
+1. RAG Model Integration: Our QA app seamlessly integrates the RAG model, a state-of-the-art approach that combines retrieval-based and generation-based methods for improved question answering.
+
+2. Efficient Query Search: With the power of Langchain, Chainlit, and Gemini, our app ensures lightning-fast query search capabilities. Users can expect accurate and relevant responses to their queries in record time.
+
+3. Modular Coding: The repository follows best practices of modular coding, ensuring clean and maintainable codebase. Developers can easily navigate through the code, making enhancements and modifications a breeze.
+
+4. MLOps with GitHub Actions: We embrace MLOps principles by automating the deployment pipeline using GitHub Actions. Continuous integration and continuous deployment (CI/CD) ensure that changes are tested, integrated, and deployed seamlessly.
+
+5. Docker Support: We provide a Dockerfile to create containers, enabling hassle-free deployment and ensuring consistency in dependencies across different environments. Docker simplifies the packaging and deployment of our app, making it easy to scale and manage.
+
+6. AWS Integration: Deploy our QA app with ease on AWS EC2 and ECR. Utilize the power of AWS cloud infrastructure to host and scale your application. EC2 provides resizable compute capacity in the cloud, while ECR securely stores and manages Docker container images.
 
 ### For MLOPs tools:
 I have used Github Actions for implementing CI/CD pipeline and AWS ECR for container registry of The Docker container and AWS EC2 for hosting it.
 
 ## Tech Stack
 - Python
-- LlamaIndex
+- Langchain
 - Google Gemini
-- Streamlit
-- Pinecone
+- Chainlit
+- FAISS
 - Docker
 - Github Actions
 - AWS ECR
@@ -47,19 +60,7 @@ I have used Github Actions for implementing CI/CD pipeline and AWS ECR for conta
 
 ## Images 
 
-Main Page :
-![image](https://github.com/Rajarshi12321/AI_reasearch_assistant/assets/94736350/f878b503-507e-4bea-bc38-e539797d818e)
-
-
-Page when querying and uploading pdf :
-
-1. ![image](https://github.com/Rajarshi12321/AI_reasearch_assistant/assets/94736350/8c912caa-a1ee-495c-af18-a934a87d4451)
-
-
-
-2. ![image](https://github.com/Rajarshi12321/AI_reasearch_assistant/assets/94736350/b3766e1e-225d-4f10-8ec8-d9c4a696ece0)
-
-- ![image](https://github.com/Rajarshi12321/AI_reasearch_assistant/assets/94736350/ff266891-2910-4216-bddb-5bb381f5ceeb)
+QA Page :
 
 
 ## Working with the code
@@ -86,7 +87,7 @@ To run this project locally, please follow these steps:-
      conda create -p venv python=3.9 -y 
      ```
     Note:
-    - It is important to use python=3.9 for proper use of LlamaIndex or else you would get unexpecterd errors
+    - It is important to use python=3.9 for proper use of Langchain or else you would get unexpecterd errors
 
 
 3. **Activate the Virtual Environment** (Optional)
@@ -114,18 +115,17 @@ To run this project locally, please follow these steps:-
 
 5. Create a .env file in the root directory and add your Pinecone credentials as follows:
     ```shell  
-    PINECONE_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
     GEMINI_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
     ```
 
 
 6. Run the Flask app: Execute the following code in your terminal.
    ```shell  
-   streamlit run app.py 
+   chainlit run app.py -w
    ```
    
 
-6. Access the app: Open your web browser and navigate to http://localhost:8501/ to use the House Price Prediction and Property Recommendation app.
+6. Access the app: Open your web browser and navigate to http://localhost:8000/ to use the House Price Prediction and Property Recommendation app.
 
 ## Contributing
 I welcome contributions to improve the functionality and performance of the app. If you'd like to contribute, please follow these guidelines:

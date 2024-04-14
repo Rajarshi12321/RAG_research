@@ -1,72 +1,47 @@
-import streamlit as st
-from pathlib import Path
+# from QA_app.components.data_querying import user_query
+from chainlit import on_chat_start, on_message, LangchainCallbackHandler
+import chainlit as cl
+from QA_app.components.data_querying import user_query
 
-import os
-
-import google.generativeai as genai
-
-from research_assistant_app.components.data_ingestion import (
-    get_cleaned_dir_docs,
-    get_cleaned_input_docs,
-)
-
-from research_assistant_app.components.data_querying import user_query
-from research_assistant_app.components.data_indexing import run_indexing_pipeline
+# user_query
 
 
-from dotenv import load_dotenv
-
-load_dotenv()
-os.getenv("GOOGLE_API_KEY")
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
-
-
-st.set_page_config("Chat PDF")
-
-st.header("Your research assistant here to help💁 (Powered by Gemini)")
-
-
-user_question = st.text_input(
-    "Chat with existing Pdfs in Pinecone data base or Your added PDF"
-)
-
-if user_question:
+async def user_query_func(user_question):
     response = user_query(user_question)
+    # Replace this with your actual logic for processing the user query
+    # It could involve interacting with an LLM, searching web documents, etc.
+    # For illustration purposes, let's just return a simple response
+    return response
 
-    st.write(response)
+
+@cl.on_chat_start
+def start():
+    # user_query
+
+    print("Chat started!")
 
 
-File = st.file_uploader(
-    "Upload Your new PDF file to store in Pinecone DB", type=("pdf"), key="pdf"
-)
+@cl.on_message
+async def main(message: cl.Message):
+    # user_query
+    user_question = message.content
+    # response = user_query(user_question)
+    # response = await user_query_func("What happended to the birds")
+    response = await user_query_func(user_question)
+    print(user_question, "see")
+    # user_query = cl.make_async(user_query)
 
-if File:  # Save uploaded file to 'Data/' folder.
-    save_folder = "Data"
-    save_path = Path(save_folder, File.name)
-    with open(save_path, mode="wb") as w:
-        w.write(File.getvalue())
+    # await user_query("What happended to the birds")
+    # print(user_question, "see22222222")
 
-    if save_path.exists():
-        st.success(f"File {File.name} is successfully saved!")
+    # Use LangchainCallbackHandler to capture the final answer
+    # callback_handler = LangchainCallbackHandler(stream_final_answer=True)
+    # response = await cl.make_async(user_query)(user_question)
+    # response = await cl.make_async(user_query)(user_question)
 
-    file_dir = f"Data/{File.name}"
+    # await message.reply(response)
+    await cl.Message(content=response).send()
 
-    res = get_cleaned_input_docs(file_dir)
 
-    print(res, "cleaned docs")
-
-    index_stats = run_indexing_pipeline(res)
-
-    print(index_stats, "checking indexes")
-
-    if index_stats != None:
-        st.success(f"File {File.name} is successfully upserted in Pinecone DB!")
-
-    user_question_pdf = st.text_input("Ask a Question from the PDF File")
-
-    if user_question_pdf:
-        response = user_query(user_question_pdf)
-
-        st.write(response)
-
-    File = None
+# # Run the Chainlit app
+# cl.run()
