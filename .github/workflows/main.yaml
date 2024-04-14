@@ -108,9 +108,9 @@ jobs:
 
          
          
-      # - name: Stop and remove container if running
-      #   run: |
-      #    docker ps -q --filter "name=langchain_qa" | grep -q . && docker stop langchain_qa && docker rm -fv langchain_qa
+      - name: Stop and remove container if running
+        run: |
+         docker ps -q --filter "name=langchain_qa" | grep -q . && docker stop langchain_qa && docker rm -fv langchain_qa
        
       - name: Run Docker Image to serve users
         run: |
