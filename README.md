@@ -117,7 +117,7 @@ To run this project locally, please follow these steps:-
 
 5. Create a .env file in the root directory and add your Pinecone credentials as follows:
     ```shell  
-    GEMINI_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    GOOGLE_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
     ```
 
 
