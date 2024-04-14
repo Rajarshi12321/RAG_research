@@ -60,7 +60,9 @@ I have used Github Actions for implementing CI/CD pipeline and AWS ECR for conta
 
 ## Images 
 
-Langchain_QA Page :
+Langchain_QA Page : 
+![image](https://github.com/Rajarshi12321/Langchain_QA/assets/94736350/29f8a163-142a-4c1c-84c0-971f61882e8b)
+
 
 
 ## Working with the code
