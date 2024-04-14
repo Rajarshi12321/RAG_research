@@ -1,4 +1,4 @@
-# QA app Project
+# Langchain_QA app Project
 
 - [LinkedIn - Rajarshi Roy](https://www.linkedin.com/in/rajarshi-roy-learner/)
   
@@ -13,7 +13,7 @@
 
 ## Table of Contents
 
-- [QA app Project](#qa-app-project)
+- [Langchain\_QA app Project](#langchain_qa-app-project)
   - [Table of Contents](#table-of-contents)
   - [About The Project](#about-the-project)
     - [For MLOPs tools:](#for-mlops-tools)
@@ -27,7 +27,7 @@
 
 ## About The Project
 
-Welcome to the QA app repository, a powerful tool built on Google Gemini technology. Our QA app is designed to efficiently implement the RAG (Retrieval-Augmented Generation) model, leveraging cutting-edge technologies including Langchain, Chainlit, and Gemini for lightning-fast query search and response generation.
+Welcome to the Langchain_QA app repository, a powerful tool built on Google Gemini technology. Our QA app is designed to efficiently implement the RAG (Retrieval-Augmented Generation) model, leveraging cutting-edge technologies including Langchain, Chainlit, and Gemini for lightning-fast query search and response generation.
 
 Key Features:
 
@@ -60,7 +60,7 @@ I have used Github Actions for implementing CI/CD pipeline and AWS ECR for conta
 
 ## Images 
 
-QA Page :
+Langchain_QA Page :
 
 
 ## Working with the code
