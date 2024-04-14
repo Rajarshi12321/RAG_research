@@ -14,7 +14,7 @@ from langchain.prompts.chat import ChatPromptTemplate
 
 
 load_dotenv()
-gemini_api_key = os.getenv("GOOGLE_API_KEY")
+gemini_api_key = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=gemini_api_key)
 embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
 # Setting Tempreture to 0.3 for getting low risk results

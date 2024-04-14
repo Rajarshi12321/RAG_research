@@ -7,6 +7,8 @@ chromadb
 faiss-cpu
 langchain_google_genai
 
+
+
 chainlit
 unstructured==0.7.12
 ipykernel
