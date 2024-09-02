@@ -1,4 +1,4 @@
-# Langchain_QA app Project
+# RAG_research app Project
 
 - [LinkedIn - Rajarshi Roy](https://www.linkedin.com/in/rajarshi-roy-learner/)
   
@@ -13,7 +13,7 @@
 
 ## Table of Contents
 
-- [Langchain\_QA app Project](#langchain_qa-app-project)
+- [RAG\_research app Project](#rag_research-app-project)
   - [Table of Contents](#table-of-contents)
   - [About The Project](#about-the-project)
     - [For MLOPs tools:](#for-mlops-tools)
@@ -27,13 +27,13 @@
 
 ## About The Project
 
-Welcome to the Langchain_QA app repository, a powerful tool built on Google Gemini technology. Our QA app is designed to efficiently implement the RAG (Retrieval-Augmented Generation) model, leveraging cutting-edge technologies including Langchain, Chainlit, and Gemini for lightning-fast query search and response generation.
+Welcome to the RAG_research app repository, a powerful tool built on Google Gemini technology. Our QA app is designed to efficiently implement the RAG (Retrieval-Augmented Generation) model, leveraging cutting-edge technologies including Langchain, Streamlit, and Gemini for lightning-fast query search and response generation.
 
 Key Features:
 
 1. RAG Model Integration: Our QA app seamlessly integrates the RAG model, a state-of-the-art approach that combines retrieval-based and generation-based methods for improved question answering.
 
-2. Efficient Query Search: With the power of Langchain, Chainlit, and Gemini, our app ensures lightning-fast query search capabilities. Users can expect accurate and relevant responses to their queries in record time.
+2. Efficient Query Search: With the power of Langchain, Streamlit, and Gemini, our app ensures lightning-fast query search capabilities. Users can expect accurate and relevant responses to their queries in record time.
 
 3. Modular Coding: The repository follows best practices of modular coding, ensuring clean and maintainable codebase. Developers can easily navigate through the code, making enhancements and modifications a breeze.
 
@@ -50,7 +50,7 @@ I have used Github Actions for implementing CI/CD pipeline and AWS ECR for conta
 - Python
 - Langchain
 - Google Gemini
-- Chainlit
+- Streamlit
 - FAISS
 - Docker
 - Github Actions
@@ -126,7 +126,7 @@ To run this project locally, please follow these steps:-
    ```
    
 
-6. Access the app: Open your web browser and navigate to http://localhost:8000/ to use the House Price Prediction and Property Recommendation app.
+6. Access the app: Open your web browser and navigate to http://localhost:8501/ to use the House Price Prediction and Property Recommendation app.
 
 ## Contributing
 I welcome contributions to improve the functionality and performance of the app. If you'd like to contribute, please follow these guidelines:
@@ -148,4 +148,4 @@ Rajarshi Roy - [royrajarshi0123@gmail.com](mailto:royrajarshi0123@gmail.com)
 ## License
 This project is licensed under the MIT License. Feel free to modify and distribute it as per the terms of the license.
 
-I hope this README provides you with the necessary information to get started with the road to Generative AI with Google Gemini and LlamaIndex.
+I hope this README provides you with the necessary information to get started with the road to Generative AI with Google Gemini and Langchain.
