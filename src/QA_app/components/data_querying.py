@@ -3,7 +3,7 @@ from PyPDF2 import PdfReader
 import os
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 import google.generativeai as genai
-from langchain.vectorstores import FAISS
+from langchain_community.vectorstores import FAISS
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.chains.question_answering import load_qa_chain
 from langchain.prompts import PromptTemplate
@@ -20,7 +20,7 @@ embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
 # Setting Tempreture to 0.3 for getting low risk results
 
 model = ChatGoogleGenerativeAI(
-    model="gemini-1.5-pro-latest", api_key=gemini_api_key, temperature=0.3
+    model="gemini-1.0-pro-latest", api_key=gemini_api_key, temperature=0.3
 )
 
 genai.configure(api_key=gemini_api_key)
@@ -71,14 +71,16 @@ def user_query(user_question):
 
     response = my_query(prompt_template, user_question)
 
+    # print("Final answer:", response["output_text"])
+
     return response["output_text"]
 
 
 if __name__ == "__main__":
-    user_question = "What happened in the deadly mongoose story"
+    user_question = "Tell me about the phrase ` Priorities: knowledge first, technology second, opinions third` "
     print(user_question)
     # prompt_template = my_prompt()
 
     response = user_query(user_question)
 
-    print(response)
+    print("\n\n", response)

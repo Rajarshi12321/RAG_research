@@ -18,7 +18,7 @@
   - [About The Project](#about-the-project)
     - [For MLOPs tools:](#for-mlops-tools)
   - [Tech Stack](#tech-stack)
-  - [Images](#images)
+  - [Images  and Video](#images--and-video)
   - [Working with the code](#working-with-the-code)
   - [Contributing](#contributing)
   - [Contact](#contact)
@@ -58,10 +58,9 @@ I have used Github Actions for implementing CI/CD pipeline and AWS ECR for conta
 - AWS EC2
 
 
-## Images 
+## Images  and Video
 
-Langchain_QA Page : 
-![image](https://github.com/Rajarshi12321/Langchain_QA/assets/94736350/29f8a163-142a-4c1c-84c0-971f61882e8b)
+Home Page : 
 
 
 
@@ -75,7 +74,7 @@ To run this project locally, please follow these steps:-
 1. Clone the repository:
 
    ```shell
-   git clone https://github.com/Rajarshi12321/Langchain_QA.git
+   git clone https://github.com/Rajarshi12321/RAG_research.git
    ```
 
 
@@ -121,9 +120,9 @@ To run this project locally, please follow these steps:-
     ```
 
 
-6. Run the Flask app: Execute the following code in your terminal.
+6. Run the Streamlit app: Execute the following code in your terminal.
    ```shell  
-   chainlit run app.py -w
+   streamlit run app.py
    ```
    
 

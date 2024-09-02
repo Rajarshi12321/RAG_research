@@ -1,29 +1,17 @@
 streamlit
+streamlit-feedback
 google-generativeai
 python-dotenv
 langchain
-PyPDF2
-chromadb
-faiss-cpu
+langsmith
 langchain_google_genai
-
-
-
-chainlit
-unstructured==0.7.12
-ipykernel
-# langchain_openai 
 langchain_core
-# python-dotenv
-# streamlit
 langchain_community
-langserve
-fastapi
-uvicorn
-sse_starlette
-bs4
-pypdf
-# chromadb
+regex
+IPython
 faiss-cpu
+
+PyPDF2
+
 
 -e .
